@@ -333,71 +333,6 @@ heading,
     color: var(--point);
 }
 
-.text-item {
-    word-break: keep-all;
-    word-wrap: break-word;
-}
-
-.text-item a:before,
-.tx-link:before {
-    content: "\e62d";
-    font-family: 'themify';
-    margin-right: 5px;
-}
-
-.figure.fileblock a,
-#tt-body-page figure.fileblock a:before {
-    content: '';
-}
-
-.tx-link.imgblock:before {
-    display: none;
-}
-
-.text-item ul,
-.text-item li {
-    list-style: inherit;
-}
-
-.text-item ul {
-    list-style: disc inside;
-}
-
-.text-item ol {
-    list-style: inside decimal;
-}
-
-.text-item u {
-    text-decoration: none;
-    position: relative;
-    background-image: linear-gradient(to bottom, #3f3f3f 0%, #3f3f3f 100%);
-    background-size: 100% 2px;
-    background-position: center 100%;
-    background-repeat: no-repeat;
-    transition: .5s ease-out;
-}
-
-.text-item u:hover {
-    color: var(--bg);
-    background-size: 100% 100%;
-}
-
-.text-item u:hover::before {
-    transform: translateY(0);
-    transition: -webkit-transform .25s ease-out;
-    transition: transform .25s ease-out;
-}
-
-.text-item a {
-    color: #698882;
-    color: var(--point);
-    transition: .5s;
-}
-
-.text-item a:hover {
-    color: inherit;
-}
-
 .sns {
     position: relative;
     display: flex;
@@ -415,6 +350,23 @@ heading,
     color: var(--bg);
 }
 
+#myo_gal .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#myo_gal .item img {
+    max-width:200px;
+    margin-right: 25px;
+    padding: 30px 0;
+}
+
+#myo_gal .item info {
+    max-width:200px;
+    margin-right: 25px;
+    padding: 30px 0;
+}
 
 .pagination {
     cursor: default;
@@ -510,5 +462,38 @@ heading,
         background-color: var(--bg);
         border-radius: 100%;
         text-align: center;
+    }
+
+    #myo_gal .item {
+        flex-direction: column;
+    }
+
+    #myo_gal heading {
+        text-align: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    #myo_gal .item img {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        justify-content: center;
+        padding: 20px 0 10px 0;
+    }
+
+
+    #myo_gal .item .info {
+        text-align: center;
+        padding-top: 10px;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        margin-bottom: 10%;
+    }
+
+    #myo_gal .item ul {
+        text-align: center;
+        padding: 10px 0;
     }
 }
